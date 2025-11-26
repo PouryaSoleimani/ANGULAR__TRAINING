@@ -8,6 +8,7 @@ import { Select } from '../select/select';
   templateUrl: './box.html',
   styleUrl: './box.css',
 })
+
 export class Box {
   public readonly title = 'PRODUCT_1';
   public readonly desc = 'DESC__DESC';
