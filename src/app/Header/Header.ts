@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: '',
+  selector: 'app-header',
   imports: [],
   templateUrl: './Header.html',
   styleUrl: './Header.css',
 })
 export class Header {
-  public title = 'HEADER';
+  public readonly title = 'HEADER';
 }
