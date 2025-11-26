@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { LittleBox } from '../little-box/little-box';
+import { Select } from '../select/select';
 
 @Component({
-  selector: 'AppBox',
-  imports: [LittleBox],
+  selector: 'app-box',
+  imports: [LittleBox, Select],
   templateUrl: './box.html',
   styleUrl: './box.css',
 })

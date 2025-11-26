@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'LittleBox',
+  selector: 'app-little-box',
   imports: [],
   templateUrl: './little-box.html',
   styleUrl: './little-box.css',
