@@ -17,8 +17,9 @@ export class App {
 
   public isDisabled = false;
 
-  clickFunctionEvent(event: any) {
-    console.info('CLICK TEST !! ', event.target.value);
+  clickFunctionEvent(event: KeyboardEvent) {
+    const value = (event.target as HTMLInputElement).value;
+    console.info('VALUE => ', value);
   }
 }
  
