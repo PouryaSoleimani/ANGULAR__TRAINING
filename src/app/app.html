@@ -15,10 +15,9 @@
     <img [src]="imgUrl" alt="angular" class="rounded-xl hover:scale-105 duration-300 transition-all shadow-md shadow-white">
   </div>
   <div class="flex items-center justify-center pb-5">
-    <button 
-    type="button"
-    [disabled]='isDisabled ? true : false'
-      class="px-3 py-2 disabled:bg-red-900 disabled:cursor-not-allowed rounded-lg bg-zinc-700 border border-zinc-800 font-bold text-white"
+    <button
+    (click)="clickFunctionEvent()"
+    class="px-3 py-2 disabled:bg-red-900 disabled:cursor-not-allowed rounded-lg bg-zinc-700 border border-zinc-800 font-bold text-white"
       >
       CLICK ME
     </button>
@@ -27,4 +26,4 @@
 </main>
 <!-- END ------------------------------------------------------------------------->
 <router-outlet />
-         
+        

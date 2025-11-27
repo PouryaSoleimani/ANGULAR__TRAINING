@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './Header/Header';
 import { Footer } from './Footer/footer';
@@ -10,17 +10,14 @@ import { Box } from './Box/box';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App implements OnInit {
+export class App {
   protected readonly title = signal('ANGULAR__TRAINING');
   protected readonly name = 'POURYA SOLEIMANI';
   imgUrl = 'https://w0.peakpx.com/wallpaper/571/466/HD-wallpaper-angular-programming-computer.jpg';
 
-  isDisabled = true;
-  ngOnInit() {
-    setTimeout(() => {
-      this.isDisabled = false;
-      console.log('Button enabled!');
-    }, 2000);
+
+
+  clickFunctionEvent() {
+    console.log('CLICK TEST !! ');
   }
 }
-  
