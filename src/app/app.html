@@ -19,20 +19,19 @@
   </div>
 
   <div class="flex items-center justify-center pb-5">
+    <!--   (click)="clickFunctionEvent('HELLO')" -->
 <button 
   [disabled]="isDisabled"
-  (click)="clickFunctionEvent('HELLO')"
   class="px-3 py-2 disabled:bg-red-900 disabled:cursor-not-allowed rounded-lg bg-zinc-700 border border-zinc-800 font-bold text-white"
   >
       CLICK ME
     </button>
 
-    <input class="border p-2 rounded-xl bg-zinc-800" type="text" (keypress)="clickFunctionEvent($event)" />
-
+    <!-- <input class="border p-2 rounded-xl bg-zinc-800" type="text" (keypress)="clickFunctionEvent($event)"> -->
+    <input class="border p-2 rounded-xl bg-zinc-800" type="text" [(ngModel)]="serverName">
   </div>
   <app-footer />
 </main>
 
 <!-- ^ END ------------------------------------------------------------------------->
 <router-outlet />
-        
