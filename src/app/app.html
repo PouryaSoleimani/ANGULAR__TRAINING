@@ -26,14 +26,14 @@
   </div>
 
   <div
-    class=" items-center justify-center pb-5 border-2 flex flex-col w-fit mx-auto gap-y-5 p-5 rounded-xl border-zinc-800">
+    class="items-center justify-center pb-5 border-2 flex flex-col w-fit mx-auto gap-y-5 p-5 rounded-xl border-zinc-800"
+  >
     <input
       placeholder="Title"
       class="border p-2 rounded-xl bg-zinc-800"
       type="text"
       [(ngModel)]="inputStringValue"
-    />
-    <input
+    /><input
       placeholder="Price"
       class="border p-2 rounded-xl bg-zinc-800"
       type="number"
@@ -42,17 +42,19 @@
     <button
       [disabled]="isDisabled"
       class="px-4 py-2 bg-emerald-900 w-full rounded-lg font-bold text-white"
-      (click)="handleSubmit(inputStringValue,inputNumberValue)"
+      (click)="handleSubmit(inputStringValue, inputNumberValue)"
     >
-      CLICK ME</button>
+      CLICK ME
+    </button>
   </div>
 
   <div class="border-2 flex flex-col gap-3 w-fit mx-auto p-3 border-zinc-600 rounded-xl mt-3">
-    <p>FORM VALUES: </p>
+    <p>FORM VALUES:</p>
     <p>TITLE: {{ inputStringValue.length ? inputStringValue : ' NO__TITLE' }}</p>
     <p>PRICE : ${{ inputNumberValue.toLocaleString() }}</p>
   </div>
 
+  <app-form-component></app-form-component>
   <app-footer />
 </main>
 <!-- ^ END ------------------------------------------------------------------------->

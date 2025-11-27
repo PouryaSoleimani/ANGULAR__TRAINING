@@ -1,0 +1,25 @@
+<div
+  class="border-2 w-fit mx-auto flex flex-col items-center justify-center gap-6 border-zinc-600 rounded-xl p-3"
+>
+  <input
+    type="text"
+    [(ngModel)]="username"
+    placeholder="username ..."
+    class="border-2 bg-zinc-900 border-zinc-800 px-2 py-1.5 rounded-sm"
+  />
+  <input
+    type="text"
+    [(ngModel)]="email"
+    placeholder="email ..."
+    class="border-2 bg-zinc-900 border-zinc-800 px-2 py-1.5 rounded-sm"
+  />
+  <input
+    type="text"
+    [(ngModel)]="phoneNumber"
+    placeholder="phone number ..."
+    class="border-2 bg-zinc-900 border-zinc-800 px-2 py-1.5 rounded-sm"
+  />
+  <button (click)="SubmitHandler(username, email, phoneNumber)" class="bg-teal-700 px-4 py-2">
+    LOGIN
+  </button>
+</div>

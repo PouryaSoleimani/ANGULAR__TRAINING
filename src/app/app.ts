@@ -4,10 +4,11 @@ import { Header } from './Header/Header';
 import { Footer } from './Footer/footer';
 import { Box } from './Box/box';
 import { FormsModule } from '@angular/forms';
+import { FormComponent } from './form-component/form-component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, Box, FormsModule],
+  imports: [RouterOutlet, Header, Footer, Box, FormsModule, FormComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -28,4 +29,3 @@ export class App {
     });
   }
 }
- 
