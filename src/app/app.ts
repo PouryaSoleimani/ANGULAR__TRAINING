@@ -17,7 +17,8 @@ export class App {
 
   public isDisabled = false;
 
-  clickFunctionEvent() {
-    console.log('CLICK TEST !! ');
+  clickFunctionEvent(event: any) {
+    console.info('CLICK TEST !! ', event.target.value);
   }
 }
+ 
