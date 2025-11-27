@@ -8,9 +8,11 @@ import { Select } from '../select/select';
   templateUrl: './box.html',
   styleUrl: './box.css',
 })
-
 export class Box {
   public readonly title = 'PRODUCT_1';
   public readonly desc = 'DESC__DESC';
   public readonly price = 200000;
+  stringReturn() {
+    return this.title;
+  }
 }

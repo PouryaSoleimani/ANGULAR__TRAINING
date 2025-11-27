@@ -13,4 +13,13 @@ import { Box } from './Box/box';
 export class App {
   protected readonly title = signal('ANGULAR__TRAINING');
   protected readonly name = 'POURYA SOLEIMANI';
+  imgUrl = 'https://w0.peakpx.com/wallpaper/571/466/HD-wallpaper-angular-programming-computer.jpg';
+
+  isDisabled = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.isDisabled = true;
+    }, 2000);
+  }
 }

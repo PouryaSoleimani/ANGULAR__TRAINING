@@ -1,17 +1,30 @@
 <!--^ APP HTML --------------------------------------------------------------------------->
-<main class="w-screen h-screen items-center justify-between bg-black text-white font-bold">
+<main class="w-screen min-h-screen items-center justify-between bg-black text-white font-bold">
   <HeaderComponent />
   <div class="border-4 w-fit mx-auto bg-zinc-900 rounded-xl border-zinc-800 my-10 p-10 flex items-center justify-center">
     <h2> THIS IS MY NAME : 
       <span class="bg-zinc-300 mx-4 text-black p-3 rounded-md">{{name}}</span>
     </h2>
   </div>
-  <div class="flex items-center justify-center gap-10 pb-10">
+  <div class="flex items-center justify-center gap-10 pb-4">
     <app-box />
     <app-box />
     <app-box />
+  </div>
+  <div class="flex items-center justify-center p-10">
+    <img [src]="imgUrl" alt="angular" class="rounded-xl hover:scale-105 duration-300 transition-all shadow-md shadow-white">
+  </div>
+  <div class="flex items-center justify-center pb-5">
+    <button 
+    type="button"
+    [disabled]='!isDisabled'
+      class="px-3 py-2 disabled:bg-red-900 disabled:cursor-not-allowed rounded-lg bg-zinc-700 border border-zinc-800 font-bold text-white"
+      >
+      CLICK ME
+    </button>
   </div>
   <app-footer />
 </main>
 <!-- END ------------------------------------------------------------------------->
 <router-outlet />
+        

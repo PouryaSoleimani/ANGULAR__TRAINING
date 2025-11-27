@@ -1,7 +1,8 @@
 <div class="border w-40 py-3 flex flex-col items-center justify-center gap-5 rounded-xl bg-zinc-800 my-3">
   <p>{{ title }}</p>
   <p>{{ desc }}</p>
-  <p>{{ price.toLocaleString() }}</p>
+  <p>{{ price.toLocaleString() }}</p> 
+  <p>TITLE : {{ stringReturn() }}</p>
   <app-little-box class="text-red-600 bg-black p-2 rounded-full">{{title}}</app-little-box>
   <app-select />
 </div>
