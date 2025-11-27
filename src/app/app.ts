@@ -15,7 +15,7 @@ export class App {
   protected readonly name = 'POURYA SOLEIMANI';
   imgUrl = 'https://w0.peakpx.com/wallpaper/571/466/HD-wallpaper-angular-programming-computer.jpg';
 
-
+  public isDisabled = false;
 
   clickFunctionEvent() {
     console.log('CLICK TEST !! ');

@@ -16,6 +16,7 @@
   </div>
   <div class="flex items-center justify-center pb-5">
     <button
+    [disabled]="isDisabled"
     (click)="clickFunctionEvent()"
     class="px-3 py-2 disabled:bg-red-900 disabled:cursor-not-allowed rounded-lg bg-zinc-700 border border-zinc-800 font-bold text-white"
       >
