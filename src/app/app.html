@@ -2,9 +2,12 @@
 <main class="w-screen min-h-screen items-center justify-between bg-black text-white font-bold">
   <HeaderComponent />
 
-  <div class="border-4 w-fit mx-auto bg-zinc-900 rounded-xl border-zinc-800 my-10 p-10 flex items-center justify-center">
-    <h2> THIS IS MY NAME : 
-      <span class="bg-zinc-300 mx-4 text-black p-3 rounded-md">{{name}}</span>
+  <div
+    class="border-4 w-fit mx-auto bg-zinc-900 rounded-xl border-zinc-800 my-10 p-10 flex items-center justify-center"
+  >
+    <h2>
+      THIS IS MY NAME :
+      <span class="bg-zinc-300 mx-4 text-black p-3 rounded-md">{{ name }}</span>
     </h2>
   </div>
 
@@ -15,23 +18,42 @@
   </div>
 
   <div class="flex items-center justify-center p-10">
-    <img [src]="imgUrl" alt="angular" class="rounded-xl hover:scale-105 duration-300 transition-all shadow-md shadow-white">
+    <img
+      [src]="imgUrl"
+      alt="angular"
+      class="rounded-xl hover:scale-105 duration-300 transition-all shadow-md shadow-white"
+    />
   </div>
 
-  <div class="flex items-center justify-center pb-5">
-    <!--   (click)="clickFunctionEvent('HELLO')" -->
-<button 
-  [disabled]="isDisabled"
-  class="px-3 py-2 disabled:bg-red-900 disabled:cursor-not-allowed rounded-lg bg-zinc-700 border border-zinc-800 font-bold text-white"
-  >
-      CLICK ME
-    </button>
-
-    <!-- <input class="border p-2 rounded-xl bg-zinc-800" type="text" (keypress)="clickFunctionEvent($event)"> -->
-    <input class="border p-2 rounded-xl bg-zinc-800" type="text" [(ngModel)]="serverName">
+  <div
+    class=" items-center justify-center pb-5 border-2 flex flex-col w-fit mx-auto gap-y-5 p-5 rounded-xl border-zinc-800">
+    <input
+      placeholder="Title"
+      class="border p-2 rounded-xl bg-zinc-800"
+      type="text"
+      [(ngModel)]="inputStringValue"
+    />
+    <input
+      placeholder="Price"
+      class="border p-2 rounded-xl bg-zinc-800"
+      type="number"
+      [(ngModel)]="inputNumberValue"
+    />
+    <button
+      [disabled]="isDisabled"
+      class="px-4 py-2 bg-emerald-900 w-full rounded-lg font-bold text-white"
+      (click)="handleSubmit(inputStringValue,inputNumberValue)"
+    >
+      CLICK ME</button>
   </div>
+
+  <div class="border-2 flex flex-col gap-3 w-fit mx-auto p-3 border-zinc-600 rounded-xl mt-3">
+    <p>FORM VALUES: </p>
+    <p>TITLE: {{ inputStringValue.length ? inputStringValue : ' NO__TITLE' }}</p>
+    <p>PRICE : ${{ inputNumberValue.toLocaleString() }}</p>
+  </div>
+
   <app-footer />
 </main>
-
 <!-- ^ END ------------------------------------------------------------------------->
 <router-outlet />
