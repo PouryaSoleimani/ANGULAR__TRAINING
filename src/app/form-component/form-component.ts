@@ -11,8 +11,11 @@ export class FormComponent {
   public username: string = '';
   public email: string = '';
   public phoneNumber: string = '';
-
+  public isValid = false
   public SubmitHandler = (username: string, email: string, phoneNumber: string) => {
     console.log('username =>', username, '|', 'email =>', email, '|', 'phone-number =>', phoneNumber);
+    if (username.length > 0 && email.length > 5 && phoneNumber.length < 11) {
+      this.isValid = true
+    }
   };
 }
