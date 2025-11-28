@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { App } from '../app';
 import { GlobalStore } from '../store/GlobalStore';
+import { UiStore } from '../store/UiStore';
 @Component({
   selector: 'app-form-component',
   imports: [FormsModule],
@@ -27,4 +28,6 @@ export class FormComponent {
   // IMPORTS 
   public AppStore = inject(App)
   public isUserLoggedIn = inject(GlobalStore).isUserLoggedIn
+  public layout = inject(UiStore).formLayout()
+
 }
