@@ -1,4 +1,4 @@
-import { Component, NgModule, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './Header/Header';
 import { Footer } from './Footer/footer';
@@ -19,14 +19,18 @@ export class App {
   imgUrl = 'https://w0.peakpx.com/wallpaper/571/466/HD-wallpaper-angular-programming-computer.jpg';
 
   public isDisabled = false;
-
   public inputStringValue = '';
   public inputNumberValue = 0;
 
-  handleSubmit(title: string, price: number) {
+  public handleToggle() {
+    this.isDisabled = !this.isDisabled
+  }
+
+  public handleSubmit(title: string, price: number) {
     console.log({
       title: title,
       price: price,
     });
   }
+
 }

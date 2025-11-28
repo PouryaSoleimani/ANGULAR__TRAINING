@@ -54,10 +54,20 @@
     <p>PRICE : ${{ inputNumberValue.toLocaleString() }}</p>
   </div>
   @if (isDisabled == false) {
-  <div class="text-white w-fit mx-auto my-4">FALSE</div>
+  <div class="w-fit mx-auto my-4 bg-red-900 px-5 py-3 rounded-lg font-black text-white">FALSE</div>
   } @else {
-  <div class="text-white w-fit mx-auto my-4">TRUE</div>
+  <div class="w-fit mx-auto my-4 bg-emerald-900 px-5 py-3 rounded-lg font-black text-white">
+    TRUE
+  </div>
   }
+  <div class="flex items-center justify-center">
+    <button
+      (click)="handleToggle()"
+      class="bg-sky-900 mx-auto px-5 py-3 rounded-xl text-white font-bold"
+    >
+      TOGGLE SHOW
+    </button>
+  </div>
   <app-form-component></app-form-component>
   <app-footer />
 </main>
