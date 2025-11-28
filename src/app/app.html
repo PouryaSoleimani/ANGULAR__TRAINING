@@ -53,6 +53,7 @@
     <p>TITLE: {{ inputStringValue.length ? inputStringValue : ' NO__TITLE' }}</p>
     <p>PRICE : ${{ inputNumberValue.toLocaleString() }}</p>
   </div>
+  <!-- ^ NG__IF ------------------------------------------------------------------------------------------------------------->
   @if (isDisabled == false) {
   <div class="w-fit mx-auto my-4 bg-red-900 px-5 py-3 rounded-lg font-black text-white">FALSE</div>
   } @else {
@@ -68,6 +69,7 @@
       TOGGLE SHOW
     </button>
   </div>
+  <!-- ^ NG__CLASS & NG__STYLE ----------------------------------------------------------------------------------------------------------->
   @if(2 < 3){
   <div [ngStyle]="{ backgroundColor: getColor() }">TRUE</div>
   }@else {
@@ -84,7 +86,7 @@
   </div>
 
   <app-form-component></app-form-component>
-  <!--^ NG FOR -->
+  <!--^ NG FOR ------------------------------------------------------------------------------------------------------------->
   <div class="grid grid-cols-6 w-fit border-2 border-orange-600 mx-auto p-3 gap-3">
     @for(item of FakeDataProducts ; track item.id){
     <p class="bg-white text-black p-3 border-2 border-zinc-600">
@@ -93,6 +95,7 @@
     }
   </div>
 
+  <!-- ^ CLICK ------------------------------------------------------------------------------------------------------------->
   <div class="flex items-center justify-center">
     <button
       (click)="addProduct()"
