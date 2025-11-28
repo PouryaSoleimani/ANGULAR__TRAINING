@@ -56,4 +56,13 @@ export class App {
       title: 'PRODUCT__' + (Math.random() * 10).toString().slice(0, 1)
     })
   }
+
+  public isShowDetails = false
+  public details = 'THIS IS DETAILS'
+  public detailsShowToggler() {
+    this.isShowDetails = !this.isShowDetails
+  }
+
 }
+
+
