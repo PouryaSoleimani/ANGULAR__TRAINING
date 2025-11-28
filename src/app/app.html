@@ -1,5 +1,5 @@
 <!--^ APP HTML --------------------------------------------------------------------------->
-<main class="w-screen min-h-screen items-center justify-between bg-black text-white font-bold">
+<main class="items-center justify-between bg-black text-white font-bold">
   <HeaderComponent />
 
   <div
@@ -106,7 +106,7 @@
   </div>
 
   <!-- ^ PRACTICE 2------------------------------------------------------------------------------------------------------------->
-  <div class="border-2 h-64 flex flex-col items-center justify-center gap-4 p-4 border-zinc-600">
+  <div class="border-2 h-auto flex flex-col items-center justify-center gap-4 p-4 border-zinc-600">
     <button (click)="detailsShowToggler()" class="bg-orange-400 px-5 py-3 rounded-xl w-fit">
       SHOW DETAILS
     </button>
@@ -126,6 +126,24 @@
         {{ number }}
       </p>
       }
+    </div>
+    
+    <!-- ^ NG__FOR -->
+    <div class="p-3 w-1/2 border-2 border-zinc-800 rounded-lg grid grid-cols-4 gap-5">
+      @for (name of namesArray; track $index) {
+      <p class="bg-zinc-800 p-3 rounded-lg text-white">{{ name.id }}. {{ name.name }}</p>
+      }
+    </div>
+
+    <!-- ^ NG__FORMS -->
+    <div class="flex bg-black border-2 border-zinc-600 p-3 rounded-lg flex-col gap-2 bg">
+      <Label [htmlFor]="name">NAME</Label>
+      <input
+        [(ngModel)]="newName"
+        type="text"
+        class="p-3 bg-zinc-800 text-white font-bold rounded-sm"
+      />
+      <button class="bg-amber-900 py-1 rounded-sm" (click)="addNewNameHandler(newName)">ADD</button>
     </div>
   </div>
 

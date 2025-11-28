@@ -71,6 +71,26 @@ export class App {
   public addNumberToArray() {
     this.numbersArray.push(this.numbersArray.length + 1);
   }
+
+  public namesArray = [
+    { id: 1, name: "MAMAD" },
+    { id: 2, name: "REZA" },
+    { id: 3, name: 'MOHSEN' },
+    { id: 4, name: 'POURYA' }
+  ]
+
+  public newName: string = ''
+
+  public addNewNameHandler(name: string) {
+    if (name.length == 0) return
+    this.namesArray.push(
+      {
+        id: Number(this.namesArray.length + 1),
+        name: name
+      })
+    this.newName = ''
+  }
+
 }
 
 
