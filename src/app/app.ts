@@ -59,6 +59,7 @@ export class App {
   }
 
   public isShowDetails = false
+
   public details = 'THIS IS DETAILS'
 
   public detailsShowToggler() {
