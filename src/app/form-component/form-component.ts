@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { Input } from '@angular/core';
 @Component({
   selector: 'app-form-component',
   imports: [FormsModule],
@@ -13,6 +13,7 @@ export class FormComponent {
   public email: string = '';
   public phoneNumber: string = '';
   public isValid = false
+
   // FUNCTIONS
   public SubmitHandler = (username: string) => {
     if (username.length == 0) return
@@ -20,4 +21,7 @@ export class FormComponent {
     this.isValid = true
     this.username = ''
   };
+
+  // IMPORTS 
+
 }
