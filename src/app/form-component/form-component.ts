@@ -1,8 +1,7 @@
-import { Component, inject, Output } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Input } from '@angular/core';
 import { App } from '../app';
-import { GlobalStore } from '../store/Global';
+import { GlobalStore } from '../store/GlobalStore';
 @Component({
   selector: 'app-form-component',
   imports: [FormsModule],
