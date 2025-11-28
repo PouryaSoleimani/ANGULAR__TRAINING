@@ -18,7 +18,7 @@ export class App {
   protected readonly name = 'POURYA SOLEIMANI';
   imgUrl = 'https://w0.peakpx.com/wallpaper/571/466/HD-wallpaper-angular-programming-computer.jpg';
 
-  public isDisabled = false;
+  public isDisabled = true;
   public inputStringValue = '';
   public inputNumberValue = 0;
 
@@ -33,4 +33,11 @@ export class App {
     });
   }
 
+  public getColor() {
+    if (this.isDisabled == true) {
+      return 'cornf1lowerblue'
+    } else {
+      return 'darkRed'
+    }
+  }
 }

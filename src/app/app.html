@@ -68,6 +68,11 @@
       TOGGLE SHOW
     </button>
   </div>
+  @if(2 < 3){
+  <div [ngStyle]="{ backgroundColor: getColor() }">TRUE</div>
+  }@else {
+  <div [ngClass]="2 < 3 ? 'bg-red-600' : 'bg-blue-600'">FALSE</div>
+  }
   <app-form-component></app-form-component>
   <app-footer />
 </main>
