@@ -82,7 +82,25 @@
   >
     COLOR
   </div>
+
   <app-form-component></app-form-component>
+  <div class="grid grid-cols-6 w-fit border-2 border-orange-600 mx-auto p-3 gap-3">
+    @for(item of FakeDataProducts ; track item.id){
+    <p class="bg-white text-black p-3 border-2 border-zinc-600">
+      {{ item.id.toString().slice(0, 2) }} - {{ item.title }}
+    </p>
+    }
+  </div>
+
+  <div class="flex items-center justify-center">
+    <button
+      (click)="addProduct()"
+      class="w-fit mx-auto bg-zinc-800 p-3 m-3 border-2 border-zinc-700"
+    >
+      ADD PRODUCT
+    </button>
+  </div>
+
   <app-footer />
 </main>
 <!-- ^ END ------------------------------------------------------------------------->
