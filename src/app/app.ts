@@ -1,14 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { Component, NgModule, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './Header/Header';
 import { Footer } from './Footer/footer';
 import { Box } from './Box/box';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form-component/form-component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, Box, FormsModule, FormComponent],
+  imports: [RouterOutlet, Header, Footer, Box, FormsModule, FormComponent, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
