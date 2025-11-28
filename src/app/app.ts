@@ -79,6 +79,13 @@ export class App {
     { id: 4, name: 'POURYA' }
   ]
 
+  public borderColorChanger(index: number) {
+    if (Number(index) % 2 !== 0) {
+      return 'border-orange-500'
+    } else {
+      return 'border-blue-500'
+    }
+  }
   public newName: string = ''
 
   public addNewNameHandler(name: string) {

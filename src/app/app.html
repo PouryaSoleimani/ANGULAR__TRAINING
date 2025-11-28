@@ -113,7 +113,7 @@
     @if (isShowDetails) {
     <p class="bg-white text-black font-bold p-3 rounded-xl border-2 border-orange-400">
       {{ details }}
-    </p> 
+    </p>
     }
     <!-- --------------------------------------------------------------------------------------------------------- -->
     <button class="bg-cyan-500 p-3 rounded-md" (click)="addNumberToArray()">ADD NUMBER</button>
@@ -131,7 +131,12 @@
     <!-- ^ NG__FOR -->
     <div class="p-3 w-1/2 border-2 border-zinc-800 rounded-lg grid grid-cols-4 gap-5">
       @for (name of namesArray; track $index) {
-      <p class="bg-zinc-800 p-3 rounded-lg text-white">{{ name.id }}. {{ name.name }}</p>
+      <p
+        class="bg-zinc-800 p-3 rounded-lg border-2 text-white"
+        [ngClass]="borderColorChanger($index)"
+      >
+        {{ name.id }}. {{ name.name }}
+      </p>
       }
     </div>
 
