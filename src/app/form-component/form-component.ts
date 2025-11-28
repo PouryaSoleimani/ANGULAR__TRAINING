@@ -1,6 +1,7 @@
-import { Component, Output } from '@angular/core';
+import { Component, inject, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Input } from '@angular/core';
+import { App } from '../app';
 @Component({
   selector: 'app-form-component',
   imports: [FormsModule],
@@ -23,5 +24,5 @@ export class FormComponent {
   };
 
   // IMPORTS 
-
+  public AppStore = inject(App)
 }

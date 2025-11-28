@@ -21,6 +21,7 @@
     placeholder="phone number ..."
     class="border-2 bg-zinc-900 border-zinc-800 px-2 py-1.5 rounded-sm"
   /> -->
+
   <button
     [disabled]="isValid"
     (click)="SubmitHandler(username)"
@@ -28,4 +29,6 @@
   >
     LOGIN
   </button>
+  <p>{{ AppStore.details() }}</p>
+  <p>{{ AppStore.count() }}</p>
 </div>

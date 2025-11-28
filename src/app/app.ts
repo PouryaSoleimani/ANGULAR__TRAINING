@@ -60,7 +60,7 @@ export class App {
 
   public isShowDetails = false;
 
-  public details = 'THIS IS DETAILS';
+  public details = signal('THIS IS DETAILS');
 
   public detailsShowToggler() {
     this.isShowDetails = !this.isShowDetails;
@@ -98,6 +98,8 @@ export class App {
     this.newName = ''
   }
 
+  //^ SIGNAL 
+  public count = signal(0)
 }
 
 
