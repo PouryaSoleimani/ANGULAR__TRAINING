@@ -35,9 +35,11 @@ export class App {
 
   public getColor() {
     if (this.isDisabled == true) {
-      return 'cornf1lowerblue'
+      return 'cornflowerblue'
     } else {
       return 'darkRed'
     }
   }
+
+  public color = 'black'
 }

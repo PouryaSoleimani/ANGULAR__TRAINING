@@ -73,6 +73,15 @@
   }@else {
   <div [ngClass]="2 < 3 ? 'bg-red-600' : 'bg-blue-600'">FALSE</div>
   }
+  <div
+    [ngClass]="
+      color === 'black'
+        ? 'text-black bg-white w-fit p-3 mx-auto'
+        : 'text-blue-600 bg-blue-200 w-fit mx-auto p-3'
+    "
+  >
+    COLOR
+  </div>
   <app-form-component></app-form-component>
   <app-footer />
 </main>
