@@ -23,7 +23,7 @@ export class App {
   public inputNumberValue = 0;
 
   public handleToggle() {
-    this.isDisabled = !this.isDisabled
+    this.isDisabled = !this.isDisabled;
   }
 
   public handleSubmit(title: string, price: number) {
@@ -35,43 +35,42 @@ export class App {
 
   public getColor() {
     if (this.isDisabled == true) {
-      return 'cornflowerblue'
+      return 'cornflowerblue';
     } else {
-      return 'darkRed'
+      return 'darkRed';
     }
   }
 
-  // ^ PRACTICE 
-  public color = 'black'
+  // ^ PRACTICE ------------------------------------------------------------------------------------------------------------->
+  public color = 'black';
 
   public FakeDataProducts = [
-    { id: "1", title: 'PRODUCT_1' },
-    { id: "2", title: 'PRODUCT_2' },
-    { id: "3", title: 'PRODUCT_3' },
-    { id: "4", title: 'PRODUCT_4' },
-  ]
+    { id: '1', title: 'PRODUCT_1' },
+    { id: '2', title: 'PRODUCT_2' },
+    { id: '3', title: 'PRODUCT_3' },
+    { id: '4', title: 'PRODUCT_4' },
+  ];
 
   public addProduct() {
     this.FakeDataProducts.push({
       id: crypto.randomUUID(),
-      title: 'PRODUCT__' + (Math.random() * 10).toString().slice(0, 1)
-    })
+      title: 'PRODUCT__' + (Math.random() * 10).toString().slice(0, 1),
+    });
   }
 
-  public isShowDetails = false
+  public isShowDetails = false;
 
-  public details = 'THIS IS DETAILS'
+  public details = 'THIS IS DETAILS';
 
   public detailsShowToggler() {
-    this.isShowDetails = !this.isShowDetails
+    this.isShowDetails = !this.isShowDetails;
   }
 
-  public numbersArray: number[] = []
+  public numbersArray: number[] = [];
 
   public addNumberToArray() {
-    this.numbersArray.push((this.numbersArray.length + 1))
+    this.numbersArray.push(this.numbersArray.length + 1);
   }
-
 }
 
 
