@@ -42,4 +42,8 @@ export class App {
   }
 
   public color = 'black'
+
+  public FakeDataProducts = [
+    { id: 1, title: 'PRODUCT_1' }
+  ]
 }
