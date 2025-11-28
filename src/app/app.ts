@@ -44,6 +44,9 @@ export class App {
   public color = 'black'
 
   public FakeDataProducts = [
-    { id: 1, title: 'PRODUCT_1' }
+    { id: 1, title: 'PRODUCT_1' },
+    { id: 2, title: 'PRODUCT_2' },
+    { id: 3, title: 'PRODUCT_3' },
+    { id: 4, title: 'PRODUCT_4' }
   ]
 }
