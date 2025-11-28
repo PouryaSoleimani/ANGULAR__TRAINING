@@ -100,6 +100,7 @@ export class App {
 
   //^ SIGNAL 
   public count = signal(0)
+  public firstName = signal('POURYA')
 }
 
 
