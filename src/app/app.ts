@@ -59,9 +59,15 @@ export class App {
 
   public isShowDetails = false
   public details = 'THIS IS DETAILS'
-   
+
   public detailsShowToggler() {
     this.isShowDetails = !this.isShowDetails
+  }
+
+  public numbersArray: number[] = []
+
+  public addNumberToArray() {
+    this.numbersArray.push((this.numbersArray.length + 1))
   }
 
 }

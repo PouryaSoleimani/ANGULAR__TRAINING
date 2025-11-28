@@ -115,6 +115,11 @@
       {{ details }}
     </p>
     }
+
+    <button>ADD NUMBER</button>
+    @for (number of numbersArray; track $index) {
+    <p class="bg-orange-400 p-5 rounded-full font-bold border-2 border-zinc-900">{{ number }}</p>
+    }
   </div>
 
   <app-footer />
