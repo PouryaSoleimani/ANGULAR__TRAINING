@@ -41,6 +41,7 @@ export class App {
     }
   }
 
+  // ^ PRACTICE 
   public color = 'black'
 
   public FakeDataProducts = [
