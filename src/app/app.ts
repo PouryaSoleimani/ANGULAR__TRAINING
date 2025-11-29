@@ -73,34 +73,33 @@ export class App {
   }
 
   public namesArray = [
-    { id: 1, name: "MAMAD" },
-    { id: 2, name: "REZA" },
+    { id: 1, name: 'MAMAD' },
+    { id: 2, name: 'REZA' },
     { id: 3, name: 'MOHSEN' },
-    { id: 4, name: 'POURYA' }
-  ]
+    { id: 4, name: 'POURYA' },
+  ];
 
   public borderColorChanger(index: number) {
     if (Number(index) % 2 !== 0) {
-      return 'border-orange-500'
+      return 'border-orange-500';
     } else {
-      return 'border-blue-500'
+      return 'border-blue-500';
     }
   }
-  public newName: string = ''
+  public newName: string = '';
 
   public addNewNameHandler(name: string) {
-    if (name.length == 0) return
-    this.namesArray.push(
-      {
-        id: Number(this.namesArray.length + 1),
-        name: name
-      })
-    this.newName = ''
+    if (name.length == 0) return;
+    this.namesArray.push({
+      id: Number(this.namesArray.length + 1),
+      name: name,
+    });
+    this.newName = '';
   }
 
-  //^ SIGNAL 
-  public count = signal(0)
-  public firstName = signal('POURYA')
+  //^ SIGNAL
+  public count = signal(0);
+  public firstName = signal('POURYA');
 }
 
 
