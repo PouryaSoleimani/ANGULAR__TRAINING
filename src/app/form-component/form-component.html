@@ -1,5 +1,5 @@
 <div
-  class="border-2 mt-4 w-fit mx-auto flex flex-col items-center justify-center gap-6 border-zinc-600 rounded-xl p-3"
+  class="border-2 my-5 w-fit mx-auto flex flex-col items-center justify-center gap-6 border-zinc-600 rounded-xl p-3"
 >
   <p class="underline font-black decoration-blue-700">LOGIN FORM</p>
   <input
@@ -35,4 +35,12 @@
   <p>LOGGED IN : {{ isUserLoggedIn() == true ? 'TRUE' : 'FALSE' }}</p>
 
   <p class="bg-cyan-200 text-black p-3">LAYOUT : {{ layout }}</p>
+  <p>FULLNAME ==> {{store.fullname()}}</p>
+  <button 
+  (click)="store.setFullName(store.fullname() == 'AHMAD MOHSEN' ? 'POURYA' : 'AHMAD MOHSEN')"
+  class="bg-pink-600 px-5 py-3 rounded-lg"
+  >
+  
+  CHANGE NAME
+</button>
 </div>

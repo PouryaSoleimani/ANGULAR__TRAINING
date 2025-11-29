@@ -25,10 +25,9 @@ export class FormComponent {
   };
 
   // IMPORTS
-  public _GlobalStore = inject(GlobalStore);
+  public store = inject(GlobalStore);
   public AppStore = inject(App);
   public isUserLoggedIn = inject(GlobalStore).isUserLoggedIn;
   public layout = inject(UiStore).formLayout();
-  public name = inject(GlobalStore).fullname;
-  public setNewName = this._GlobalStore.setFullName;
+  public updateName = inject(GlobalStore).setFullName;
 }

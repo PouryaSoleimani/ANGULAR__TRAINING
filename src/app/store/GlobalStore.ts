@@ -8,7 +8,8 @@ export class GlobalStore {
   toggleUserLogIn(status: boolean) {
     this.isUserLoggedIn.set(status);
   }
-  fullname = signal('POURYA SOLEIMANI');
+
+  public fullname = signal('POURYA SOLEIMANI');
   setFullName(newname: string) {
     this.fullname.set(newname);
   }
