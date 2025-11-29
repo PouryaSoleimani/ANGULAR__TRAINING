@@ -40,7 +40,20 @@
   (click)="store.setFullName(store.fullname() == 'AHMAD MOHSEN' ? 'POURYA' : 'AHMAD MOHSEN')"
   class="bg-pink-600 px-5 py-3 rounded-lg"
   >
-  
   CHANGE NAME
 </button>
+
+<div>
+  <button 
+  (click)="store.addToShoppingCart({id : 1 , title : 'PRODUCT__1'})"
+  class="bg-violet-600 px-5 py-3 rounded-lg"
+  >
+ADD TO CART
+</button>
+<div class="grid grid-cols-5 gap-3 p-3 border-2 border-zinc-800 m-3 rounded-lg">
+  @for (item of store.ShoppingCart(); track $index) {
+    <p class="text-white">{{item.title}}</p>
+  }
+</div>
+</div>
 </div>

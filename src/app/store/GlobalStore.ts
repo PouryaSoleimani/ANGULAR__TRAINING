@@ -13,4 +13,9 @@ export class GlobalStore {
   setFullName(newname: string) {
     this.fullname.set(newname);
   }
+
+  public ShoppingCart = signal<any[]>([]);
+  addToShoppingCart(item: any) {
+    this.ShoppingCart.set([...this.ShoppingCart(), item]);
+  }
 }
