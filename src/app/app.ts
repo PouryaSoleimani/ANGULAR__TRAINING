@@ -17,7 +17,6 @@ export class App {
   protected readonly title = signal('ANGULAR__TRAINING');
   protected readonly name = 'POURYA SOLEIMANI';
   imgUrl = 'https://w0.peakpx.com/wallpaper/571/466/HD-wallpaper-angular-programming-computer.jpg';
-
   public isDisabled = true;
   public inputStringValue = '';
   public inputNumberValue = 0;
@@ -40,7 +39,6 @@ export class App {
       return 'darkRed';
     }
   }
-
   // ^ PRACTICE ------------------------------------------------------------------------------------------------------------->
   public color = 'black';
 

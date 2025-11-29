@@ -14,20 +14,21 @@ export class FormComponent {
   public username: string = '';
   public email: string = '';
   public phoneNumber: string = '';
-  public isValid = false
+  public isValid = false;
 
   // FUNCTIONS
   public SubmitHandler = (username: string) => {
-    if (username.length == 0) return
-    console.info('USER LOGGED IN ...')
-    this.isValid = true
-    this.username = ''
+    if (username.length == 0) return;
+    console.info('USER LOGGED IN ...');
+    this.isValid = true;
+    this.username = '';
   };
 
-
-  // IMPORTS 
-  public AppStore = inject(App)
-  public isUserLoggedIn = inject(GlobalStore).isUserLoggedIn
-  public layout = inject(UiStore).formLayout()
-
+  // IMPORTS
+  public _GlobalStore = inject(GlobalStore);
+  public AppStore = inject(App);
+  public isUserLoggedIn = inject(GlobalStore).isUserLoggedIn;
+  public layout = inject(UiStore).formLayout();
+  public name = inject(GlobalStore).fullname;
+  public setNewName = this._GlobalStore.setFullName;
 }
